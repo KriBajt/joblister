@@ -5,19 +5,19 @@
     protected $vars = array();
 
     //konstruktor
-    public function__construct($template){
+    public function __construct($template){
         $this->template= $template;
 
     }
-    public funtion__get($key){
+    public function __get($key){
             return $this->vars[$key];
 
     }
-    public function__set($key, $value){
+    public function __set($key, $value){
         $this->vars[$key]=$value;
 
     }
-    public function__toString(){
+    public function __toString(){
         extract($this->vars);
         chdir(dirname($this->template));
         ob_start();
