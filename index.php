@@ -9,7 +9,7 @@
 <body>
     <?php
 
-        echo "dupa";
+        echo "test";
 
     ?>
 </body>
