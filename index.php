@@ -5,8 +5,19 @@
 
 $template = new Template('templates/frontpage.php');
 
+$category =isset($_GET['category']) ? $_GET['category'] : null;
 
-$template->title =' Latest Jobs';
-$template->jobs = $job->getAllJobs();
+if($category){
+        $template->jobs = $job->getByCategory($category);
+        $template->title = 'Jobs In '. $job->getCategory($category)->name;
+
+}else {
+    $template->title =' Latest Jobs';
+    $template->jobs = $job->getAllJobs();
+}
+
+
+
+$template->categories = $job->getCategories();
 
 echo $template;
