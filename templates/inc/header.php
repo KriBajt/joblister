@@ -17,9 +17,10 @@
               <a class="nav-link active" href="http://localhost/jobfinder">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Create Listing</a>
+              <a class="nav-link" href="create.php">Create Listing</a>
             </li>
           </ul>
         </nav>
         <h3 class="text-muted"><?php echo SITE_TITLE; ?></h3>
       </div>
+      <?php displayMessage(); ?>
