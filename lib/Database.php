@@ -31,7 +31,7 @@ public function __construct(){
 }
 
 public function query($query){
-    $this->stmt=$this->dbh->prepare($query);
+    $this->stmt = $this->dbh->prepare($query);
 
 }
 

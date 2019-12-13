@@ -15,6 +15,18 @@ Posted By <?php echo $job->contact_user; ?> on <?php echo $job->post_date; ?>
 <a href="index.php">Go Back</a>
 <br><br>
 
+<div class="well">
+    <a href="edit.php?=<?php echo $job->id; ?>" class="btn btn-default">Edit</a>
+    <form style="display:inline;" method="post" action="job.php">
+
+        <input type="hidden" name="del_id" value="<?php echo $job->id;?>">
+        <input type="submit" class="btn btn-danger" value="delete">
+
+
+    </form>
+
+
+</div>
 
 <?php include 'inc/header.php'; ?>
 

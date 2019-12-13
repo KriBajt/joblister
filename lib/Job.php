@@ -87,4 +87,18 @@ public function getCategories(){
         }
 
 }
+//Delete Job
+public function delete($id){
+    $this->db->query("DELETE FROM jobs WHERE id=$id");
+
+//Bind Data
+
+//execute
+if($this->db->execute()){
+return true;
+}else {
+return false;
+}
+
+}
 }
